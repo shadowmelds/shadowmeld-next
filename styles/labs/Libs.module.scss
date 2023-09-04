@@ -1,0 +1,54 @@
+.account-panel {
+}
+
+.app-container {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 0 0.08em var(--border-color);
+  border-radius: 0.5em;
+  gap: 24px;
+}
+
+.code {
+  display: block;
+  color: var(--blog-text);
+  overflow-x: auto;
+  margin: 0 2px;
+  white-space: pre;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--code-background);
+  line-height: 1.5rem;
+  word-wrap: normal;
+}
+
+.account-panel {
+}
+
+.client-panel {
+  flex: 1;
+  width: 0;
+}
+
+
+//普通桌面端
+@media only screen and (min-width: 768px) {
+
+  .account-panel {
+    max-width: 400px;
+    min-width: 300px;
+  }
+}
+
+// 大屏幕端
+@media only screen and (min-width: 1200px) {
+  .lib-cta {
+    padding: 0 3.5rem;
+  }
+
+  .app-container {
+  }
+
+}

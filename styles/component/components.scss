@@ -1,0 +1,209 @@
+// 分类标签选择器
+$card-shadow: 0 0.5em 1em -0.125em rgba(#000000, 0.2), 0 0px 0 1px rgba(#000000, 0.02) !default;
+#tags-cta {
+  margin-top: var(--space-16);
+  border-radius: 0.5em;
+  position: relative;
+  display: inline-block;
+  justify-content: flex-start;
+
+  .button {
+    background-color: var(--light-color);
+    margin-right: 0.5rem;
+    transition: all .6s cubic-bezier(.165, .84, .44, 1);
+    margin-bottom: 0.5rem;
+    color: #363636;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+
+    &.unselected {
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+
+      .icon {
+        display: none;
+      }
+    }
+
+    &.selected {
+      background-color: var(--accent);
+      color: var(--reverse-text-primary);
+
+      .icon {
+        display: inline-flex;
+      }
+    }
+
+    .icon:first-child:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .shadowmeld-tag {
+    border-color: transparent;
+    border-width: 1.2px;
+    box-shadow: 0 0 0 0.125em transparent;
+    position: relative;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &:hover,
+    &.is-hovered {
+      box-shadow: $card-shadow
+    }
+
+    &::after {
+      content: ""; // 不知道为什么删掉这个就没阴影了
+      z-index: -1;
+      top: 0;
+      left: 0;
+      //width: 100%;
+      //height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
+
+// 照片列表查看器
+.img-cta {
+
+  .action-icon {
+    background-color: white;
+    align-self: end;
+  }
+
+  .root {
+    margin: 4em 2em 2em;
+  }
+
+  .dialog-mask {
+    display: none;
+    background-color: rgba(#21202F, .92);
+    //background: rgba(0,0,0,.4);
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    margin: auto;
+    padding: var(--space-16) ;
+    -webkit-transition: opacity .2s cubic-bezier(.4,0,.2,1),visibility .2s linear;
+    transition: opacity .2s cubic-bezier(.4,0,.2,1),visibility .2s linear;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 3;
+  }
+
+  .photo-preview-linear {
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: 74%;
+    max-height: 80%;
+    display: block;
+    align-self: center;
+    margin: auto;
+    background-color: var(--surface-color);
+    padding: var(--space-40) var(--space-16);
+    border-radius: var(--space-8);
+  }
+
+  .photo-preview-cta {
+    //height: 600px;
+    height: 95%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+  }
+
+  .photo-preview {
+    max-height: 100%;
+    box-shadow: 0 8px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .is-display {
+    display: flex;
+  }
+
+  .photo-text {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-top: 1em;
+
+    .photo-description {
+      margin-right: 20px;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
+  .mat-h2 {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+  }
+
+  #img_wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    .placeholder {
+      flex-grow: 100;
+      flex-basis: 240px;
+      height: 0;
+      margin: 0;
+    }
+  }
+
+  .img_x {
+    margin: 2px;
+    background-color: violet;
+    position: relative;
+    cursor:pointer;
+  }
+
+  .img_x > img {
+    position: absolute;
+    vertical-align: bottom;
+    top: 0;
+    min-width: 100%;
+    max-width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+  }
+
+  .img_x > i {
+    display: block;
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .img-cta {
+
+    .img_x {
+      //flex-basis: 300px;
+    }
+
+    .dialog-mask {
+      padding: var(--space-32) ;
+    }
+    .photo-preview-linear {
+      padding: var(--space-40) var(--space-56);
+    }
+
+  }
+
+}

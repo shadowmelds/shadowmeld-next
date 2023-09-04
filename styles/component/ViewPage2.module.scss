@@ -1,0 +1,18 @@
+.view-page {
+  overflow: hidden;
+
+  .body-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    transition: transform 200ms ease-out 0s;
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  .body-content {
+    flex-shrink: 0;
+    flex-basis: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("file:./dev.db")
+}
+
+// 留言
+model Comment {
+  // 独一无二自增长id
+  id Int @id @default(autoincrement())
+  // 在网站的哪个板块的哪个Id下留言
+  plateId String
+  // 留言内容
+  content String
+  // 留言的时间戳
+  time DateTime @default(now())
+  // 是否显示
+  display Boolean @default(true)
+}
+
+// 喜欢
+model LikeRead {
+  // 独一无二自增长id
+  id Int @id @default(autoincrement())
+  // 网站的哪个板块的哪个Id
+  plateId String
+  // 喜欢数量
+  like String
+  // 阅读数量
+  read String
+}

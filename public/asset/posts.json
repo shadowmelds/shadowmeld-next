@@ -1,0 +1,49 @@
+{
+    "tags": [
+        "杂七杂八",
+        "开发工具"
+    ],
+    "years": [
+        "2023",
+        "2021",
+        "2020"
+    ],
+    "markdowns": {
+        "2023": [
+            {
+                "title": "Demo",
+                "content": "Markdown 格式 Demo",
+                "url": "demo.md",
+                "image": "avr.png",
+                "date": "2023.08.27",
+                "tags": [
+                    "杂七杂八"
+                ]
+            }
+        ],
+        "2021": [
+            {
+                "title": "个人介绍",
+                "content": "所有关于我的个人介绍",
+                "url": "about.md",
+                "image": "shadowmeld.png",
+                "date": "2021.11.15",
+                "tags": [
+                    "杂七杂八"
+                ]
+            }
+        ],
+        "2020": [
+            {
+                "title": "我使用了哪些工具？",
+                "content": "了解我使用哪些软件和设备",
+                "url": "uses.md",
+                "image": "012.jpg",
+                "date": "2020.8.31",
+                "tags": [
+                    "开发工具"
+                ]
+            }
+        ]
+    }
+}

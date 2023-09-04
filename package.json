@@ -1,0 +1,36 @@
+{
+  "name": "shadowmeld-next",
+  "version": "0.1.0",
+  "description": "影遁的个人网站",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "server": "node server.js",
+    "serverstart": "NODE_ENV=production node server.js",
+    "watch": "node watch.js"
+  },
+  "dependencies": {
+    "@antv/x6": "^1.33.1",
+    "@prisma/client": "^4.16.2",
+    "express": "^4.17.3",
+    "highlight.js": "^11.7.0",
+    "markdown-it": "^13.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "next": "^13.2.3",
+    "node-sass": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.32.4",
+    "webpack-cli": "^4.9.2",
+    "ws": "^8.12.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.24",
+    "eslint": "8.22.0",
+    "eslint-config-next": "^13.0.5",
+    "prisma": "^4.16.2"
+  }
+}
