@@ -13,15 +13,16 @@
 - [SQLite](https://www.sqlite.org)
 - [SVGInject](https://github.com/iconfu/svg-inject)
 - [sharp](https://sharp.pixelplumbing.com/)
+- [markdown-it](https://github.com/markdown-it/markdown-it)
 
 ### 目录结构
 
 ```
 .
 |____app # 页面
+|____module # 通用数据、组件
 |____prisma # 数据库
 |____public # 静态文件
-|____globals # 通用数据、组件
 | |____data # 通用数据
 | |____components # 通用组件
 |____style # CSS 主题
