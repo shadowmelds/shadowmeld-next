@@ -21,10 +21,10 @@
 .
 |____app # 页面
 |____module # 通用数据、组件
-|____prisma # 数据库
-|____public # 静态文件
 | |____data # 通用数据
 | |____components # 通用组件
+|____prisma # 数据库
+|____public # 静态文件
 |____style # CSS 主题
 ```
 
